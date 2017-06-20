@@ -6,6 +6,7 @@ resource "aws_autoscaling_group" "node" {
   min_size             = "${var.node_asg_min}"
   desired_capacity     = "${var.node_asg_desired}"
   vpc_zone_identifier  = ["${var.vpc_public_subnet_ids}"]
+  availability_zones   = ["${var.aws_availability_zones}"]
 
   tag = {
     key                 = "KubernetesCluster"
