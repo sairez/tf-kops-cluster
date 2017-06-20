@@ -2,10 +2,14 @@
 variable "cluster_name" {}
 # Fully qualified DNS name of cluster
 variable "cluster_fqdn" {}
-# The AWS resgion
+# The AWS region
 variable "aws_region" {}
 # ID of the VPC
 variable "vpc_id" {}
+# Availability zones
+variable "aws_availability_zones {
+  type = "list"
+}
 # Route53 zone ID
 variable "route53_zone_id" {}
 # ARN of the kops bucket
